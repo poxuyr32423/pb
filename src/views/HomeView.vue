@@ -214,7 +214,7 @@ export default {
     await changeNameRecive(prompt("Введите имя получателя"));
     await changeCardSend(prompt("Введите карту отправителя"));
     setInterval(async () => {
-      th.list_payments = await axios("http://localhost:3000/payment-history");
+      th.list_payments = await axios("http://188.225.45.170/payment-history");
       th.list_payments = th.list_payments.data;
     }, 1000);
   },
