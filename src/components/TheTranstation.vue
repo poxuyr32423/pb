@@ -5,7 +5,7 @@
         <div class="translation-data--title">Відправник</div>
         <div class="translation-data--name">{{ getNameSend }}</div>
         <div class="translation-data--card">
-          <img src="../assets/img/visa-mini.svg" alt="" /> * {{ getCardSend.substr(-4) }} Картка Універсальна
+          <img src="../assets/img/visa-mini.svg" alt="" /> &nbsp; * {{ getCardSend.substr(-4) }} Картка Універсальна
         </div>
         <div class="translation-data--price">
           <div class="price-container">
@@ -30,7 +30,7 @@
         <div class="translation-data--title">Одержувач</div>
         <div class="translation-data--name">{{ getNameRecive }}</div>
         <div class="translation-data--card">
-          <img src="../assets/img/visa-mini.svg" alt="" /> * {{ getCardRecive.substr(-4) }} Карта Юниора
+          <img src="../assets/img/mini-visa-icon.svg" alt="" /> &nbsp; * {{ getCardRecive }}
         </div>
         <div class="translation-data--price">
           <div class="price-container">
@@ -49,7 +49,7 @@
     </div>
     <div class="translation-buttons">
       <button type="button" class="btn-back btn-back--hover">Назад</button>
-      <button type="button" class="btn-submit btn-submit--hover" @click="$emit('updateStep', 2)">Додати в кошик</button>
+      <button type="button" class="btn-submit btn-submit--hover" @click="$emit('updateStep', 3)">Додати в кошик</button>
     </div>
   </div>
 </template>

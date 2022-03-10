@@ -25,7 +25,7 @@ export default {
   mounted() {
     var th = this;
     setTimeout(() => {
-      th.$emit("updateStep", 3);
+      th.$emit("updateStep", 4);
     }, 2000);
   },
 };

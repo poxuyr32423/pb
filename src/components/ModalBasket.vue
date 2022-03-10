@@ -66,7 +66,7 @@
 
         <div class="buttons-container">
           <button type="button" class="btn-back btn-back--hover">Видалити</button>
-          <button type="button" class="btn-submit btn-submit--hover" @click="$emit('updateStep', 4)">Сплатити</button>
+          <button type="button" class="btn-submit btn-submit--hover" @click="$emit('updateStep', 5)">Сплатити</button>
         </div>
       </div>
     </div>

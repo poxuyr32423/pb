@@ -43,7 +43,7 @@ export default {
   mounted() {
     var th = this;
     setTimeout(() => {
-      th.$emit("updateStep", 6);
+      th.$emit("updateStep", 7);
     }, 3000);
   },
 };

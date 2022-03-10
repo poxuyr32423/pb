@@ -1,9 +1,9 @@
 <template>
-  <modal-basket v-if="step == 3" @updateStep="updateStep" />
-  <modal-confirm v-if="step == 4" @updateStep="updateStep" />
-  <model-animate v-if="step == 5" @updateStep="updateStep" />
-  <modal-success-pay v-if="step == 6" @updateStep="updateStep" />
-  <div :class="{ 'blur-filter': step > 2 && step < 7 }">
+  <modal-basket v-if="step == 4" @updateStep="updateStep" />
+  <modal-confirm v-if="step == 5" @updateStep="updateStep" />
+  <model-animate v-if="step == 6" @updateStep="updateStep" />
+  <modal-success-pay v-if="step == 7" @updateStep="updateStep" />
+  <div :class="{ 'blur-filter': step > 3 && step < 8 }">
     <the-header />
     <div class="wrapper">
       <div class="title-page">
@@ -23,9 +23,10 @@
       </div>
 
       <form-card v-if="step == 0" @updateStep="updateStep" />
-      <the-transtation v-if="step == 1" @updateStep="updateStep" />
-      <form-loading v-if="step == 2" @updateStep="updateStep" />
-      <form-success v-if="step > 2" @updateStep="updateStep" />
+      <form-card-loading v-if="step == 1" @updateStep="updateStep" />
+      <the-transtation v-if="step == 2" @updateStep="updateStep" />
+      <form-loading v-if="step == 3" @updateStep="updateStep" />
+      <form-success v-if="step > 3" @updateStep="updateStep" />
 
       <div class="payment-history">
         <div class="payment-history__header">
@@ -204,8 +205,8 @@ export default {
   },
   watch: {
     step() {
-      if (this.step === 7) this.step = 0;
-      if (this.step > 2 && this.step < 7) {
+      if (this.step === 8) this.step = 0;
+      if (this.step > 3 && this.step < 8) {
         document.body.classList.add("overflow-hidden");
       } else {
         document.body.classList.remove("overflow-hidden");

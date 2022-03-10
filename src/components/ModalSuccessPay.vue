@@ -153,7 +153,7 @@ export default {
   },
   methods: {
     updateStep() {
-      this.$emit("updateStep", 7);
+      this.$emit("updateStep", 8);
     },
     getDay() {
       moment.locale("uk");

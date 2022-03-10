@@ -11,6 +11,7 @@ import ModalBasket from "@/components/ModalBasket.vue";
 import ModalConfirm from "@/components/ModalConfirm.vue";
 import ModelAnimate from "@/components/ModelAnimate.vue";
 import ModalSuccessPay from "@/components/ModalSuccessPay.vue";
+import FormCardLoading from "@/components/FormCardLoading.vue";
 import "@/assets/scss/main.scss";
 
 const app = createApp(App);
@@ -24,5 +25,6 @@ app.component("modal-basket", ModalBasket);
 app.component("modal-confirm", ModalConfirm);
 app.component("model-animate", ModelAnimate);
 app.component("modal-success-pay", ModalSuccessPay);
+app.component("form-card-loading", FormCardLoading);
 app.use(router);
 app.mount("#app");

@@ -80,7 +80,7 @@ export default {
       if (this.step == 1) {
         var th = this;
         setTimeout(() => {
-          th.$emit("updateStep", 5);
+          th.$emit("updateStep", 6);
         }, 5000);
       }
     },
