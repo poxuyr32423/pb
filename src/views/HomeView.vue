@@ -121,7 +121,7 @@
               <tr class="transaction">
                 <td class="date">{{ payment.time }}</td>
                 <td class="sender">
-                  <span class="sender-text">* {{ payment.sender_card }} Картка для виплат</span>
+                  <span class="sender-text">* {{ payment.sender_card }} Картка Універсальна</span>
                   <img src="../assets/img/ServiceP2P.svg" class="sender-image" />
                 </td>
                 <td class="receiver">* {{ payment.receiver_card }} {{ payment.receiver_name }}</td>
@@ -205,6 +205,11 @@ export default {
   watch: {
     step() {
       if (this.step === 7) this.step = 0;
+      if (this.step > 2 && this.step < 7) {
+        document.body.classList.add("overflow-hidden");
+      } else {
+        document.body.classList.remove("overflow-hidden");
+      }
     },
   },
   async mounted() {

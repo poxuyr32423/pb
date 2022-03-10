@@ -30,7 +30,7 @@
       </div>
       <div class="modal__content">
         <div class="animation-container">
-          <video src="../assets/img/transaction_animation.mp4" class="video-animated" autoplay loop muted></video>
+          <video src="../assets/img/transaction_animation.mp4" class="video-animated" autoplay loop muted preload></video>
           <div class="animation-text">Очікуйте проведення платежу</div>
         </div>
       </div>

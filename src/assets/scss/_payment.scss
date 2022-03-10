@@ -246,6 +246,10 @@
   color: rgba(0, 0, 0, 0.87);
   font-weight: 400;
   padding: 5px 0;
+  max-width: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card-price {

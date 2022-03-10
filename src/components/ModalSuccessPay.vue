@@ -63,7 +63,7 @@
               <tr class="transaction">
                 <td class="date">{{ time }}</td>
                 <td class="sender">
-                  <span class="sender-text">* {{ getCardSend.substr(-4) }} Картка для виплат</span>
+                  <span class="sender-text">* {{ getCardSend.substr(-4) }} Картка Універсальна</span>
                   <img src="../assets/img/ServiceP2P.svg" class="sender-image" />
                 </td>
                 <td class="receiver">* {{ getCardRecive.substr(-4) }} {{ getNameRecive }}</td>

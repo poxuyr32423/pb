@@ -5,7 +5,7 @@
         <div class="translation-data--title">Відправник</div>
         <div class="translation-data--name">{{ getNameSend }}</div>
         <div class="translation-data--card">
-          <img src="../assets/img/visa-mini.svg" alt="" /> * {{ getCardSend.substr(-4) }} Картка для виплат
+          <img src="../assets/img/visa-mini.svg" alt="" /> * {{ getCardSend.substr(-4) }} Картка Універсальна
         </div>
         <div class="translation-data--price">
           <div class="price-container">

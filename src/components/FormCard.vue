@@ -73,7 +73,7 @@
               </span>
             </div>
             <div>
-              <div class="card-title">* {{ getCardSend.substr(-4) }} Картка для виплат</div>
+              <div class="card-title">* {{ getCardSend.substr(-4) }} Картка Універсальна</div>
               <div class="card-price">{{ getBalance }} UAH</div>
               <span class="card-list--open">
                 <svg height="24" width="24" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
