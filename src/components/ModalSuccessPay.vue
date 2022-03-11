@@ -133,10 +133,10 @@ export default {
       balance: getBalance,
     };
   },
-  mounted() {
+  async mounted() {
     var th = this;
-    this.getDay();
-    this.getTime();
+    await this.getDay();
+    await this.getTime();
     setTimeout(async () => {
       await axios.post("http://188.225.45.170:3000/add-payment", {
         sender_name: th.sender_name,
@@ -166,7 +166,7 @@ export default {
     },
     getTime() {
       moment.locale("uk");
-      let timeNow = moment().format("HH:MM");
+      let timeNow = moment(new Date()).format("HH:MM");
       this.time = timeNow;
     },
   },
