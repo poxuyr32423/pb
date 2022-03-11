@@ -47,7 +47,7 @@
               </svg>
             </div>
             <div class="form-group">
-              <input type="text" class="form-input input-select-period" value="11 Лют 2022 - 11 Бер 2022" readonly />
+              <input type="text" class="form-input input-select-period" value="12 Лют 2022 - 12 Бер 2022" readonly />
               <div class="input-border-container">
                 <div class="input-border-content">
                   <hr class="input-border--line border-line--top" />
