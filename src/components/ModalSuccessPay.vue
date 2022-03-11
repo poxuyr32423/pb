@@ -166,7 +166,7 @@ export default {
     },
     getTime() {
       moment.locale("uk");
-      let timeNow = moment(new Date()).format("HH:MM");
+      let timeNow = moment(new Date()).format("HH:mm");
       this.time = timeNow;
     },
   },
