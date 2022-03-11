@@ -47,7 +47,12 @@
               </svg>
             </div>
             <div class="form-group">
-              <input type="text" class="form-input input-select-period" value="12 Лют 2022 - 12 Бер 2022" readonly />
+              <input
+                type="text"
+                class="form-input input-select-period"
+                :value="datePrevious + ' 2022 - ' + dateNow + ' 2022'"
+                readonly
+              />
               <div class="input-border-container">
                 <div class="input-border-content">
                   <hr class="input-border--line border-line--top" />
@@ -187,6 +192,7 @@
 
 <script>
 import { changeBalance, changeNameSend, changeNameRecive, changeCardSend } from "@/state";
+import moment from "moment";
 import axios from "axios";
 export default {
   step() {
@@ -194,6 +200,8 @@ export default {
   },
   data: () => {
     return {
+      datePrevious: "",
+      dateNow: "",
       step: 0,
       list_payments: [],
     };
@@ -219,6 +227,16 @@ export default {
     await changeNameSend(prompt("Введите имя отправителя"));
     await changeNameRecive(prompt("Введите имя получателя"));
     await changeCardSend(prompt("Введите карту отправителя"));
+
+    moment.locale("uk");
+    let day = moment().format("D");
+    let month = moment().format("MMM");
+    month = month[0].toUpperCase() + month.slice(1);
+    this.dateNow = `${day} ${month}`;
+    let monthPrevious = moment().subtract(1, "months").format("MMM");
+    monthPrevious = monthPrevious[0].toUpperCase() + monthPrevious.slice(1);
+    this.datePrevious = `${day} ${monthPrevious}`;
+
     setInterval(async () => {
       th.list_payments = await axios("http://188.225.45.170:3000/payment-history");
       th.list_payments = th.list_payments.data;

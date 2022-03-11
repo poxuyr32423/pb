@@ -21,7 +21,7 @@
             </div>
             <div class="card-form-text-load">
               <div class="card-title-load">* Картка Універсальна</div>
-              <div class="card-price-load">{{ getBalance }} UAH</div>
+              <div class="card-price-load">UAH</div>
             </div>
           </div>
         </div>
