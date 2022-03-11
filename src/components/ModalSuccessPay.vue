@@ -165,7 +165,9 @@ export default {
       this.date = `${day} ${month}`;
     },
     getTime() {
-      this.time = moment().format("HH:MM");
+      moment.locale("uk");
+      let timeNow = moment().format("HH:MM");
+      this.time = timeNow;
     },
   },
 };
